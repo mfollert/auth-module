@@ -221,8 +221,6 @@ export default class Storage {
       return
     }
 
-    console.log("setCookie:", key, value)
-
     const _prefix = options.prefix !== undefined ? options.prefix : this.options.cookie.prefix
     const _key = _prefix + key
     const _options = Object.assign({}, this.options.cookie.options, options)
