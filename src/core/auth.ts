@@ -47,11 +47,14 @@ export default class Auth {
     }
 
     // Restore strategy
-    this.$storage.syncUniversal('strategy', this.options.defaultStrategy)
+    // this.$storage.syncUniversal('strategy', this.options.defaultStrategy)
 
     // Set default strategy if current one is invalid
     if (!this.strategy) {
-      this.$storage.setUniversal('strategy', this.options.defaultStrategy)
+      // this.$storage.setUniversal('strategy', this.options.defaultStrategy)
+
+      // Just use the default strategy without storing it in a cookie
+      this.$storage.setState('strategy', this.options.defaultStrategy)
 
       // Give up if still invalid
       if (!this.strategy) {
