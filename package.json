@@ -2,7 +2,7 @@
   "name": "@nuxtjs/auth",
   "version": "4.9.0",
   "description": "Authentication module for Nuxt.js",
-  "repository": "nuxt-community/auth-module",
+  "repository": "mfollert/auth-module",
   "license": "MIT",
   "main": "./dist/module/index.js",
   "types": "./dist/index.d.ts",
