@@ -27,10 +27,14 @@ export default class Storage {
     }
 
     // Cookies
-    this.setCookie(key, value)
+    if (isUnset(this.getCookie(key)) || this.getCookie(key) !== value) {
+      this.setCookie(key, value)
+    }
 
     // Local Storage
-    this.setLocalStorage(key, value)
+    if (isUnset(this.getLocalStorage(key)) || this.getLocalStorage(key) !== value) {
+      this.setLocalStorage(key, value)
+    }
 
     // Local state
     this.setState(key, value)
